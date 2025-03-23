@@ -1,4 +1,4 @@
-import { Building2, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -22,12 +22,13 @@ export function Header() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center h-20 relative">
-          <div className="absolute left-0 flex items-center">
-            <Building2 className="h-8 w-8 text-orange-500" />
-            <span className={`${isScrolled || isMobileMenuOpen ? 'text-gray-900' : 'text-white'
-              } ml-2 text-2xl font-bold`}>
-              STUDIO65
-            </span>
+          <div
+          className="absolute left-0 flex items-center"
+          // onClick={}
+          >
+            <Link to='/'>
+            <img src={`${isScrolled || isMobileMenuOpen ? '/Studio65logo-black.jpg' : '/Studio65logo.jpg'}`} alt='logo' width="150" className='ml-6 mt-2' />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -101,6 +102,13 @@ export function Header() {
                 className="text-gray-900 hover:text-orange-500 font-medium text-lg transition-colors duration-200"
               >
                 Studio
+              </Link>
+              <Link
+                to="/contactus"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-gray-900 hover:text-orange-500 font-medium text-lg transition-colors duration-200"
+              >
+                Contact Us
               </Link>
             </nav>
           </div>

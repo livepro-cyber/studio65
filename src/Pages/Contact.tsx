@@ -5,6 +5,7 @@ import { ContactForm } from '@/Components/ContactForm';
 import { Mail, MapPin, Phone } from 'lucide-react';
 
 export default function Contact() {
+  let number = 9996622911;
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -70,7 +71,10 @@ export default function Contact() {
         <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-              <div className="flex flex-col items-center text-center p-8 border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div
+              className="flex flex-col items-center text-center hover:cursor-pointer p-8 border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              onClick={() => {window.location.href = `tel:${number}`}}
+              >
                 <div className="w-14 h-14 bg-orange-50 rounded-full flex items-center justify-center mb-4">
                   <Phone className="h-6 w-6 text-orange-500" />
                 </div>
@@ -81,7 +85,10 @@ export default function Contact() {
                 </a>
               </div>
 
-              <div className="flex flex-col items-center text-center p-8 border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div
+                className="flex flex-col items-center text-center p-8 border border-gray-100 hover:cursor-pointer rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                onClick={() => { window.open("https://mail.google.com/mail/?view=cm&fs=1&to=Architect.studio65%40gmail.com", "_blank") }}
+              >
                 <div className="w-14 h-14 bg-orange-50 rounded-full flex items-center justify-center mb-4">
                   <Mail className="h-6 w-6 text-orange-500" />
                 </div>
@@ -92,7 +99,10 @@ export default function Contact() {
                 </a>
               </div>
 
-              <div className="flex flex-col items-center text-center p-8 border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow md:col-span-2 lg:col-span-1">
+              <div
+                className="flex flex-col items-center text-center p-8 border border-gray-100 rounded-lg hover:cursor-pointer shadow-sm hover:shadow-md transition-shadow md:col-span-2 lg:col-span-1"
+                onClick={() => { window.open("https://maps.app.goo.gl/mN5tr68BSBjRQNZY9", "_blank") }}
+              >
                 <div className="w-14 h-14 bg-orange-50 rounded-full flex items-center justify-center mb-4">
                   <MapPin className="h-6 w-6 text-orange-500" />
                 </div>

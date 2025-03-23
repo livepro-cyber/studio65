@@ -6,7 +6,7 @@ import { TooltipProvider } from "../src/Components/ui/tooltip";
 import ScrollToTop from './Components/Scroll/ScrollToTop';
 import { ToasterComponent as Toaster } from './Components/ui/toaster';
 import { Toaster as Sonner } from 'sonner';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Contact from './Pages/Contact';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <HashRouter>
+        <BrowserRouter>
           <ScrollToTop />
           <Routes>
             <Route path='/' element={<Home />} />
@@ -23,7 +23,7 @@ function App() {
             <Route path='/Studio' element={<Studio />} />
             <Route path='/contactus' element={<Contact />} />
           </Routes>
-        </HashRouter>
+        </BrowserRouter>
       </TooltipProvider>
     </div>
   );
