@@ -27,7 +27,7 @@ export function Header() {
           // onClick={}
           >
             <Link to='/'>
-            <img src={`${isScrolled || isMobileMenuOpen ? '/Studio65logo-black.jpg' : '/Studio65logo.jpg'}`} alt='logo' width="150" className='ml-6 mt-2' />
+            <img src={`${isScrolled || isMobileMenuOpen ? '/Studio65logo-black.png' : '/Studio65logo.png'}`} alt='logo' width="150" className='ml-6 mt-2' />
             </Link>
           </div>
 
