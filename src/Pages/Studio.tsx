@@ -12,13 +12,13 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     id: 2,
-    name: "Michael Chen",
+    name: "Ajay Panghal",
     role: "Principal Architect",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80"
   },
   {
     id: 1,
-    name: "Sarah Johnson",
+    name: "Shourya Panghal",
     role: "Senior Interior Designer",
     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80"
   },
@@ -37,8 +37,8 @@ const teamMembers: TeamMember[] = [
 ];
 
 const stats = [
-  { number: "25+", label: "Years of Experience" },
-  { number: "200+", label: "Projects Completed" },
+  { number: "10+", label: "Years of Experience" },
+  { number: "110+", label: "Projects Completed" },
   { number: "100%", label: "Client Satisfaction" }
 ];
 
@@ -115,26 +115,14 @@ export function Studio() {
               className="text-gray-600 mb-6 leading-relaxed"
               variants={fadeIn}
             >
-              Founded in 1998, our studio has been at the forefront of architectural innovation,
-              creating spaces that seamlessly blend functionality with aesthetic excellence.
-              We believe in sustainable design practices that respect both the environment and
-              local cultural contexts.
+              We are the architects of clarity — where bold ideas meet disciplined execution. Since 2015, we’ve built more than just spaces; we’ve built trust, brick by brick.
             </motion.p>
             <motion.p
               className="text-gray-600 mb-8 leading-relaxed"
               variants={fadeIn}
             >
-              Our multidisciplinary team brings together expertise in architecture, interior design,
-              and urban planning to deliver comprehensive solutions that exceed client expectations.
+              With a team fluent in architecture, interior design, and urban planning, we deliver thoughtful solutions tailored to your world. Every project, every detail — designed to stand the test of time and expectation.
             </motion.p>
-            <motion.div
-              className="inline-block"
-              variants={fadeIn}
-            >
-              <span className="text-orange-500 border-b-2 border-orange-500 pb-1 font-medium">
-                Learn More About Our Process →
-              </span>
-            </motion.div>
           </div>
           <motion.div
             className="grid grid-cols-2 gap-4"

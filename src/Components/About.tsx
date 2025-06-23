@@ -1,6 +1,8 @@
 import { ChevronRightIcon } from 'lucide-react';
+import { useNavigate } from 'react-router';
 
 export function About() {
+  const navigate = useNavigate();
   return (
     <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -22,12 +24,12 @@ export function About() {
               className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover"
             />
             {/* Years Box */}
-            <div className="absolute 
-              bottom-0 right-0 sm:-right-8 lg:-right-12 
-              bg-orange-500 
-              p-4 sm:p-6 lg:p-8 
-              w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 
-              flex flex-col justify-center items-center 
+            <div className="absolute
+              bottom-0 right-0 sm:-right-8 lg:-right-12
+              bg-orange-500
+              p-4 sm:p-6 lg:p-8
+              w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64
+              flex flex-col justify-center items-center
               transform translate-y-1/4 sm:translate-y-0"
             >
               <div className="text-4xl sm:text-6xl lg:text-[80px] font-bold text-white leading-none">
@@ -51,9 +53,11 @@ export function About() {
               We know that good design means good business
             </h3>
             <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
-              Founded by Robert Downey Jr in 2004, we're an employee-owned firm pursuing a democratic design process that values everyone's input. Today we have more than 150 people in London, Hong Kong and Sydney providing architecture, interior & urban design services from concept to completion.
+              Founded by Ajay Panghal in 2015, we're an employee-owned firm pursuing a democratic design process that values everyone's input. Today we have more than 50 people in Sonipat, Panipat and Gohana providing architecture, interior & urban design services from concept to completion.
             </p>
-            <button className="w-full sm:w-auto bg-orange-500 text-white px-6 sm:px-8 py-3 sm:py-4 flex items-center justify-center sm:justify-start hover:bg-orange-600 transition duration-300 group">
+            <button
+              className="w-full sm:w-auto bg-orange-500 text-white px-6 sm:px-8 py-3 sm:py-4 flex items-center justify-center sm:justify-start hover:bg-orange-600 transition duration-300 group"
+              onClick={() => navigate('/Studio')}>
               <span className="text-sm sm:text-base">MORE ABOUT US</span>
               <ChevronRightIcon className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transform group-hover:translate-x-1 transition-transform duration-300" />
             </button>

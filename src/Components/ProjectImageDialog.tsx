@@ -26,7 +26,7 @@ const ProjectImageDialog = ({ isOpen, onClose, images, title }: ProjectImageDial
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return;
-      
+
       if (e.key === 'ArrowLeft') {
         navigateImages('prev');
       } else if (e.key === 'ArrowRight') {
@@ -42,7 +42,7 @@ const ProjectImageDialog = ({ isOpen, onClose, images, title }: ProjectImageDial
 
   const navigateImages = (dir: 'next' | 'prev') => {
     setIsLoading(true);
-    
+
     if (dir === 'next') {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
     } else {
@@ -121,8 +121,8 @@ const ProjectImageDialog = ({ isOpen, onClose, images, title }: ProjectImageDial
                 }}
                 className={cn(
                   "w-2 h-2 rounded-full transition-all duration-300",
-                  index === currentImageIndex 
-                    ? "bg-white w-4" 
+                  index === currentImageIndex
+                    ? "bg-white w-4"
                     : "bg-white/40 hover:bg-white/60"
                 )}
                 aria-label={`Go to image ${index + 1}`}
