@@ -21,8 +21,7 @@ export const heroImages = [
   },
   {
     id: "image-3",
-    // src: "https://plus.unsplash.com/premium_photo-1661962952618-031d218dd040?q=80&w=2000&auto=format&fit=crop",
-    src: "https://images.unsplash.com/photo-1748050868829-74a5a43f79c6",
+    src: "https://plus.unsplash.com/premium_photo-1661962952618-031d218dd040?q=80&w=2000&auto=format&fit=crop",
     alt: "Modern Technology Integration",
     title: "SMART LIVING",
     subtitle: "MODERN TECHNOLOGY",
