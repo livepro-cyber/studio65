@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export const heroImages = [
   {
     id: "image-1",
-    src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=2000",
+    src: "/PREMIUMINTERIORS.webp",
     alt: "Modern Architecture Villa",
     title: "PREMIUM INTERIORS",
     subtitle: "PRIVATE RESIDENCES",
@@ -13,7 +13,7 @@ export const heroImages = [
   },
   {
     id: "image-2",
-    src: "https://images.unsplash.com/photo-1623298317883-6b70254edf31?w=2000&auto=format&fit=crop&q=80",
+    src: "/LuxuryVilla.webp",
     alt: "Interior Design Detail",
     title: "LUXURY VILLA",
     subtitle: "CUSTOM DESIGNS",
@@ -21,7 +21,7 @@ export const heroImages = [
   },
   {
     id: "image-3",
-    src: "https://plus.unsplash.com/premium_photo-1661962952618-031d218dd040?q=80&w=2000&auto=format&fit=crop",
+    src: "/SmartLiving.webp",
     alt: "Modern Technology Integration",
     title: "SMART LIVING",
     subtitle: "MODERN TECHNOLOGY",
