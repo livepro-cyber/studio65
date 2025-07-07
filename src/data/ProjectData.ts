@@ -1,4 +1,4 @@
-export type ProjectCategory = 'All' | 'Architecture' | 'Interior' | 'Urban Design';
+export type ProjectCategory = 'All' | 'Residential' | 'Commercial' | 'Urban';
 
 export interface Project {
   id: number;
@@ -17,12 +17,12 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "Modern Residential Complex",
-    category: "Architecture",
+    category: "Residential",
     description: "A sustainable residential development featuring contemporary design and eco-friendly materials",
     image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80",
     images: [
       "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80",
-      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "/InteriorDesigns/Bedrooms/BR15-1003860.webp",
       "https://images.unsplash.com/photo-1444084316824-dc26d6657664?w=1200&q=80",
       "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0"
     ],
@@ -34,7 +34,7 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "Urban Park Development",
-    category: "Urban Design",
+    category: "Urban",
     description: "Revitalizing city spaces with green infrastructure and community-focused design",
     image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=800&q=80",
     images: [
@@ -50,8 +50,8 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Luxury Hotel Interior",
-    category: "Interior",
+    title: "Luxury Hotel Commercial",
+    category: "Commercial",
     description: "Contemporary interior design for a five-star hotel featuring local artisanal elements",
     image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
     images: [
@@ -68,12 +68,12 @@ export const projects: Project[] = [
   {
     id: 4,
     title: "Corporate Headquarters",
-    category: "Architecture",
+    category: "Residential",
     description: "A modern office complex designed for flexibility and collaboration",
     image: "https://images.unsplash.com/photo-1521747116042-5a810fda9664?w=800&q=80",
     images: [
       "https://images.unsplash.com/photo-1521747116042-5a810fda9664?w=1200&q=80",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&q=80",
+      "/InteriorDesigns/Bedrooms/BR29-1003860.webp",
       "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=80",
       "https://images.unsplash.com/photo-1462396881884-de2c07cb95ed?w=1200&q=80"
     ],
@@ -85,12 +85,12 @@ export const projects: Project[] = [
   {
     id: 5,
     title: "Eco-Friendly Office Tower",
-    category: "Architecture",
+    category: "Residential",
     description: "A skyscraper with innovative energy-efficient features and sustainable materials",
     image: "https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?w=800&q=80",
     images: [
       "https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?w=1200&q=80",
-      "https://images.unsplash.com/photo-1577791465485-b80039b4d69a?w=1200&q=80",
+      "/InteriorDesigns/Bedrooms/RM29-1003860.webp",
       "https://images.unsplash.com/photo-1579646528432-11fbe7b9d09c?w=1200&q=80",
       "https://images.unsplash.com/photo-1580745089072-aee9282fe258?w=1200&q=80"
     ],
@@ -102,7 +102,7 @@ export const projects: Project[] = [
   {
     id: 6,
     title: "Smart City Initiative",
-    category: "Urban Design",
+    category: "Urban",
     description: "Integrating technology and infrastructure to create a smarter, more connected urban environment",
     image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
     images: [
@@ -119,7 +119,7 @@ export const projects: Project[] = [
   {
     id: 7,
     title: "Luxury Villa Interiors",
-    category: "Interior",
+    category: "Commercial",
     description: "A high-end villa with a blend of traditional craftsmanship and modern aesthetics",
     image: "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?w=800&q=80",
     images: [
@@ -136,7 +136,7 @@ export const projects: Project[] = [
   {
     id: 8,
     title: "Sustainable Public Plaza",
-    category: "Urban Design",
+    category: "Urban",
     description: "A multifunctional public space designed for environmental and social sustainability",
     image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800&q=80",
     images: [
@@ -152,4 +152,4 @@ export const projects: Project[] = [
   }
 ];
 
-export const categories: ProjectCategory[] = ['All', 'Architecture', 'Interior', 'Urban Design'];
+export const categories: ProjectCategory[] = ['All', 'Residential', 'Commercial', 'Urban'];

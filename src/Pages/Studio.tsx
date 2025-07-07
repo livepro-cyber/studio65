@@ -7,6 +7,7 @@ interface TeamMember {
   name: string;
   role: string;
   image: string;
+  quali: string;
 }
 
 const teamMembers: TeamMember[] = [
@@ -14,25 +15,29 @@ const teamMembers: TeamMember[] = [
     id: 2,
     name: "Ajay Panghal",
     role: "Principal Architect",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80"
+    image: "/InteriorDesigns/Team/AjayPanghal.webp",
+    quali: "B.Arch, M.Plan, ITPI, IBBI Valuer, IGBC, GEM, IoV, IIA ",
   },
   {
     id: 1,
     name: "Shourya Panghal",
     role: "Senior Interior Designer",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80"
+    image: "/InteriorDesigns/Team/ShouryaPanghal.webp",
+    quali: "B.I.D., M.B.A, IIID, IIDA ",
   },
   {
     id: 3,
     name: "Emma Williams",
     role: "Urban Planning Director",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80"
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80",
+    quali: "B.Arch, M.Plan, ITPI, IoV Valuation, IIA ",
   },
   {
     id: 4,
     name: "David Miller",
     role: "Project Manager",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80"
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80",
+    quali: "B.Tech., M.Tech. FIV, IOV, M.IoE, IBBI Valuer ",
   }
 ];
 
@@ -129,7 +134,7 @@ export function Studio() {
             variants={fadeIn}
           >
             <img
-              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
+              src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nruij9q_61Rxsm_2oQRl1bgRuWun4v46_Bzimyx1Rk4e23lghxqyKUqADJzFPj8VjgMtjKFgfbkLqxZ0_5ntJ2L6SbnCtSl2Om__ug=w1024-h768"
               alt="Studio"
               className="rounded-lg shadow-lg"
             />

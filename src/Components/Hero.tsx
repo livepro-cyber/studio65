@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export const heroImages = [
   {
     id: "image-1",
-    src: "/PREMIUMINTERIORS.webp",
+    src: "/InteriorDesigns/Living/BR10-3003860.webp",
     alt: "Modern Architecture Villa",
     title: "PREMIUM INTERIORS",
     subtitle: "PRIVATE RESIDENCES",
@@ -21,7 +21,7 @@ export const heroImages = [
   },
   {
     id: "image-3",
-    src: "/SmartLiving.webp",
+    src: "/InteriorDesigns/Dinning/TN01-1103860.webp",
     alt: "Modern Technology Integration",
     title: "SMART LIVING",
     subtitle: "MODERN TECHNOLOGY",
@@ -37,9 +37,8 @@ export function Hero() {
   const [direction, setDirection] = useState(1);
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const timeoutRef = useRef<number | null>(null);
-  const fragments = 8; // Number of fragments for the transition
+  const fragments = 8;
 
-  // Preload images for smoother transitions
   useEffect(() => {
     const loadImages = async () => {
       const imagePromises = heroImages.map((img) => {
