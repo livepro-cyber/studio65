@@ -9,7 +9,7 @@ const projects: Project[] = [
     id: 1,
     image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80",
     title: "Luxury Villa Design",
-    category: "Architecture",
+    category: "Residential",
     location: "Beverly Hills, CA",
     images: [
       "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80",
@@ -23,7 +23,7 @@ const projects: Project[] = [
     id: 2,
     image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80",
     title: "Modern Office Complex",
-    category: "Interior",
+    category: "Commercial",
     location: "Manhattan, NY",
     images: [
       "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80",
@@ -37,7 +37,7 @@ const projects: Project[] = [
     id: 3,
     image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80",
     title: "Boutique Hotel",
-    category: "Urban Design",
+    category: "Urban",
     location: "Miami Beach, FL",
     images: [
       "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80",
