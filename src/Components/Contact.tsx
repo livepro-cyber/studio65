@@ -5,7 +5,7 @@ export function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
+    phone: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -25,21 +25,26 @@ export function Contact() {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycby176xeb9HN2VdelA_2pyUMS_6FCAZjfbtx6tZWZiPTv7K5-Kz9M8KOfhXRXbAIXuPM/exec', {
-        method: 'POST',
+      const response = await fetch('https://script.google.com/macros/s/AKfycbzN6Obmp9D40PC6w6SkLRs2pWqG8BkePghDo8-pEYKyr3hfoomR1creI1BRuYFuV9iB/exec', {
+        redirect: "follow",
+        method: "POST",
+        body: JSON.stringify(formData),
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "text/plain;charset=utf-8",
         },
-        body: JSON.stringify(formData)
       });
 
-      if (response.ok) {
+      const res = await response.json();
+      console.log("Response:", res);
+
+      if (response.ok && res.status === 'success') {
         setSubmitStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
+        setFormData({ name: '', email: '', phone: '', message: '' });
       } else {
         setSubmitStatus('error');
       }
     } catch (error) {
+      console.error('Fetch error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -111,10 +116,10 @@ export function Contact() {
             </div>
             <div>
               <input
-                type="text"
-                name="subject"
-                placeholder="Subject"
-                value={formData.subject}
+                type="tel"
+                name="phone"
+                placeholder="Your Phone Number"
+                value={formData.phone}
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-gray-100 border text-black border-gray-200 focus:outline-none focus:border-orange-500"
                 required
