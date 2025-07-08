@@ -25,7 +25,7 @@ export function Contact() {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbyeg7MRUFfzMzuPLEvVMF8tg5rlHCTknJdmNeTn74i41tYiRQDMuKl7LIcj1UXiUXuF/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycby176xeb9HN2VdelA_2pyUMS_6FCAZjfbtx6tZWZiPTv7K5-Kz9M8KOfhXRXbAIXuPM/exec', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,12 +35,7 @@ export function Contact() {
 
       if (response.ok) {
         setSubmitStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
-        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
         setSubmitStatus('error');
       }
@@ -144,13 +139,13 @@ export function Contact() {
               {isSubmitting ? 'Sending...' : 'Send Message'}
               {!isSubmitting && <ChevronRight className="ml-2 h-5 w-5" />}
             </button>
-            
+
             {submitStatus === 'success' && (
               <div className="p-4 bg-green-100 text-green-700 rounded">
                 Thank you! Your message has been sent successfully.
               </div>
             )}
-            
+
             {submitStatus === 'error' && (
               <div className="p-4 bg-red-100 text-red-700 rounded">
                 Something went wrong. Please try again later.
