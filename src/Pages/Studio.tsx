@@ -36,7 +36,7 @@ const teamMembers: TeamMember[] = [
     id: 4,
     name: "Sarvesh Kumar",
     role: "Structure Engineer",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80",
+    image: "/Team/SarveshKumar.webp",
     quali: "B.Tech., M.Tech. FIV, IOV, M.IoE, IBBI Valuer ",
   }
 ];
@@ -134,12 +134,12 @@ export function Studio() {
             variants={fadeIn}
           >
             <img
-              src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nruij9q_61Rxsm_2oQRl1bgRuWun4v46_Bzimyx1Rk4e23lghxqyKUqADJzFPj8VjgMtjKFgfbkLqxZ0_5ntJ2L6SbnCtSl2Om__ug=w1024-h768"
+              src="https://content.jdmagicbox.com/v2/comp/sonepat/h5/9999px130.x130.220824175030.k8h5/catalogue/studio-65-khanna-colony-sonepat-architects-17yrvhqbh7.jpg"
               alt="Studio"
               className="rounded-lg shadow-lg"
             />
             <img
-              src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&auto=format&fit=crop&q=60"
+              src="/StudioImage.webp"
               alt="Work"
               className="rounded-lg shadow-lg mt-8"
             />
@@ -212,6 +212,8 @@ export function Studio() {
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="text-xl font-semibold text-white mb-1">{member.name}</h3>
                   <p className="text-orange-500">{member.role}</p>
+                  {/* Add qualification field here */}
+                  <p className="text-gray-300 text-sm mt-2">{member.quali}</p>
                 </div>
               </div>
             </motion.div>

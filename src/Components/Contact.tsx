@@ -1,6 +1,56 @@
+import { useState } from 'react';
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, ChevronRight } from 'lucide-react';
 
 export function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
+
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbyeg7MRUFfzMzuPLEvVMF8tg5rlHCTknJdmNeTn74i41tYiRQDMuKl7LIcj1UXiUXuF/exec', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="py-24 bg-gray-900 text-white">
       <div className="container mx-auto px-4">
@@ -39,41 +89,73 @@ export function Contact() {
               <Linkedin className="h-6 w-6 cursor-pointer hover:text-orange-500" />
             </div>
           </div>
-          <form className="space-y-6 bg-white p-8">
+          <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-lg">
             <div className="grid grid-cols-2 gap-6">
               <div>
                 <input
                   type="text"
+                  name="name"
                   placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 bg-gray-100 text-black border border-gray-200 focus:outline-none focus:border-orange-500"
+                  required
                 />
               </div>
               <div>
                 <input
                   type="email"
+                  name="email"
                   placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 bg-gray-100 border text-black border-gray-200 focus:outline-none focus:border-orange-500"
+                  required
                 />
               </div>
             </div>
             <div>
               <input
                 type="text"
+                name="subject"
                 placeholder="Subject"
+                value={formData.subject}
+                onChange={handleChange}
                 className="w-full px-4 py-3 bg-gray-100 border text-black border-gray-200 focus:outline-none focus:border-orange-500"
+                required
               />
             </div>
             <div>
               <textarea
+                name="message"
                 placeholder="Your Message"
                 rows={6}
+                value={formData.message}
+                onChange={handleChange}
                 className="w-full px-4 py-3 bg-gray-100 border text-black border-gray-200 focus:outline-none focus:border-orange-500"
+                required
               ></textarea>
             </div>
-            <button className="w-full bg-orange-500 text-white px-8 py-4 flex items-center justify-center hover:bg-orange-600 transition duration-300">
-              Send Message
-              <ChevronRight className="ml-2 h-5 w-5" />
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full bg-orange-500 text-white px-8 py-4 flex items-center justify-center hover:bg-orange-600 transition duration-300 disabled:bg-orange-400"
+            >
+              {isSubmitting ? 'Sending...' : 'Send Message'}
+              {!isSubmitting && <ChevronRight className="ml-2 h-5 w-5" />}
             </button>
+            
+            {submitStatus === 'success' && (
+              <div className="p-4 bg-green-100 text-green-700 rounded">
+                Thank you! Your message has been sent successfully.
+              </div>
+            )}
+            
+            {submitStatus === 'error' && (
+              <div className="p-4 bg-red-100 text-red-700 rounded">
+                Something went wrong. Please try again later.
+              </div>
+            )}
           </form>
         </div>
       </div>
