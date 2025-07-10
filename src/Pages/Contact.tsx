@@ -72,14 +72,14 @@ export default function Contact() {
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
               <div
-              className="flex flex-col items-center text-center hover:cursor-pointer p-8 border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow"
-              onClick={() => {window.location.href = `tel:${number}`}}
+                className="flex flex-col items-center text-center hover:cursor-pointer p-8 border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                onClick={() => { window.location.href = `tel:${number}` }}
               >
                 <div className="w-14 h-14 bg-orange-50 rounded-full flex items-center justify-center mb-4">
                   <Phone className="h-6 w-6 text-orange-500" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Phone</h3>
-                <p className="text-gray-600 mb-4">We're available Monday to Friday, 9am to 6pm</p>
+                <p className="text-gray-600 mb-4">We're available Monday to Saturday 10am to 8pm</p>
                 <a href="tel:+11234567890" className="text-orange-500 hover:text-orange-600 font-medium">
                   +91 9996622911
                 </a>

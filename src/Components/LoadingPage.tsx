@@ -80,9 +80,9 @@ const LoadingPage: React.FC<LoadingPageProps> = ({ onComplete }) => {
             <div className="h-px bg-gradient-to-r from-transparent via-orange-500/60 to-transparent w-16" />
           </div>
 
-          <p className="text-orange-500 text-lg tracking-[0.3em] font-medium uppercase">
-            Architects & TownPlanners
-          </p>
+          <p className="text-orange-500 text-lg tracking-[0.3em] font-medium uppercase">Architecture</p>
+          <p className="text-orange-500 text-lg tracking-[0.3em] font-medium uppercase">Interior</p>
+          <p className="text-orange-500 text-lg tracking-[0.3em] font-medium uppercase">Town Planning</p>
         </motion.div>
 
         {/* Progress bar */}
