@@ -16,7 +16,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Modern Residential Complex",
+    title: "Residency at Batra Colony",
     category: "Residential",
     description: "A sustainable residential development featuring contemporary design and eco-friendly materials",
     image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80",

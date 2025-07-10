@@ -1,17 +1,21 @@
 import { Header } from '../Components/Header';
 import { FeaturedProjects } from '../Components/FeatureProjects';
-import { Services } from '../Components/Services'
+import { Services } from '../Components/Services';
 import { Contact } from '../Components/Contact';
 import { Footer } from '../Components/Footer';
-// import HeroSlider from '../Components/HeroComponents/HeroSlider';
 import { Hero } from '../Components/Hero';
 import { About } from '../Components/About';
 
-const Home = () => {
+type HomeProps = {
+  isVisible: boolean;
+};
+
+const Home: React.FC<HomeProps> = ({ isVisible }) => {
+  if (!isVisible) return null; // Optional: hide if not visible
+
   return (
     <div>
       <Header />
-      {/* <HeroSlider /> */}
       <Hero />
       <About />
       <FeaturedProjects />
@@ -19,7 +23,7 @@ const Home = () => {
       <Contact />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

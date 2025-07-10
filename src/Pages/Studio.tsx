@@ -14,7 +14,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 2,
     name: "Ajay Panghal",
-    role: "Principal Architect",
+    role: "Owner & Principal Architect",
     image: "/Team/AjayPanghal.webp",
     quali: "B.Arch, M.Plan, ITPI, IBBI Valuer, IGBC, GEM, IoV, IIA ",
   },
@@ -29,7 +29,7 @@ const teamMembers: TeamMember[] = [
     id: 3,
     name: "Sachin Dhimam",
     role: "Head - Architect",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80",
+    image: "/Team/SachinDhiman.webp",
     quali: "B.Arch, M.Plan, ITPI, IoV Valuation, IIA ",
   },
   {
