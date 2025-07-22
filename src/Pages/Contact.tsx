@@ -1,7 +1,7 @@
 import { Header } from '@/Components/Header';
 import { Footer } from '@/Components/Footer';
 import { motion } from 'framer-motion';
-// import { ContactForm } from '@/Components/ContactForm';
+import { ContactForm } from '@/Components/ContactForm';
 import { Mail, MapPin, Phone } from 'lucide-react';
 
 export default function Contact() {
@@ -113,6 +113,22 @@ export default function Contact() {
                   Near Gandhi Chowk, Khanna Colony Sonipat - 131101
                 </address>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Connect with Firm Section */}
+        <section className="py-16 md:py-24 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-3xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">Connect with Our Firm</h2>
+                <p className="text-gray-600 max-w-2xl mx-auto">
+                  Interested in working with us? Fill out the form below with your details and we'll get back to you as soon as possible.
+                </p>
+              </div>
+
+              <ContactForm />
             </div>
           </div>
         </section>
