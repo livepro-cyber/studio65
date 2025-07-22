@@ -55,6 +55,26 @@ export const projects: Project[] = [
     detailedDescription: "The Urban Park Development project transformed an underutilized industrial area into a vibrant public space. The design incorporates sustainable drainage systems, native plantings, and flexible community spaces for events and gatherings."
   },
   {
+    id: 4,
+    title: "Farmhouse Farmana",
+    category: "Residential",
+    description: "A modern office complex designed for flexibility and collaboration",
+    image: "/ProjectImages/Bunglow/OutterView.webp",
+    images: [
+      "/ProjectImages/Bunglow/OutterView.webp",
+      "/ProjectImages/Bunglow/LivingRoom.webp",
+      "/ProjectImages/Bunglow/LivingRoom2.webp",
+      "/ProjectImages/Bunglow/Bedroom.webp",
+      "/ProjectImages/Bunglow/Bedroom2.webp",
+      "/ProjectImages/Bunglow/Entry.webp",
+      "/ProjectImages/Bunglow/Aesthetics.webp",
+    ],
+    client: "TechInnovate Inc.",
+    location: "San Francisco, California",
+    year: "2022",
+    detailedDescription: "The Corporate Headquarters project reimagines the traditional office environment with a focus on collaboration, flexibility, and employee wellbeing. The design features adaptable workspaces, abundant natural light, biophilic elements, and state-of-the-art technology infrastructure."
+  },
+  {
     id: 3,
     title: "Luxury Hotel Commercial",
     category: "Commercial",
@@ -70,26 +90,6 @@ export const projects: Project[] = [
     location: "Miami, Florida",
     year: "2023",
     detailedDescription: "This luxury hotel interior project blends contemporary design with local cultural influences. Each space tells a story through carefully curated materials, custom furniture pieces, and artwork commissioned from regional artists."
-  },
-  {
-    id: 4,
-    title: "Luxurious Residency",
-    category: "Residential",
-    description: "A modern office complex designed for flexibility and collaboration",
-    image: "/Bunglow/OutterView.webp",
-    images: [
-      "/Bunglow/OutterView.webp",
-      "/Bunglow/LivingRoom.webp",
-      "/Bunglow/LivingRoom2.webp",
-      "/Bunglow/Bedroom.webp",
-      "/Bunglow/Bedroom2.webp",
-      "/Bunglow/Entry.webp",
-      "/Bunglow/Aesthetics.webp",
-    ],
-    client: "TechInnovate Inc.",
-    location: "San Francisco, California",
-    year: "2022",
-    detailedDescription: "The Corporate Headquarters project reimagines the traditional office environment with a focus on collaboration, flexibility, and employee wellbeing. The design features adaptable workspaces, abundant natural light, biophilic elements, and state-of-the-art technology infrastructure."
   },
   {
     id: 5,
